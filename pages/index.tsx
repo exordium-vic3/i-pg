@@ -10,11 +10,38 @@ const Home = () => {
     location.reload();
   };
 
+  const timer_restart = () => {
+    timer_restart()
+  }
+
+  const end_question = () => {
+    clearInterval(timerId); 
+    on_question_end();
+  }
+
+  const next_q = () => {
+
+  }
+
+
   return (
   <div>
     <title>
       iPG
     </title>
+
+  <div className="controls">
+	<h1>Key/Button Controls</h1>
+
+	<div onClick={timer_restart} class="key key-space">space</div>
+	<div className="act">to restart timer</div>
+
+	<div onClick={end_question} class="key key-return">m</div>
+	<div className="act">end question</div>
+
+	<div onClick={next_q} class="key key-return">return</div>
+	<div className="act">to next question</div>
+</div>
 
   <div className="footer">
 	Built by
